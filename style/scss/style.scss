@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import "./game-screen";
+@import "./shop-screen";
+@import "./battle-screen";
+
+* {
+  font-family: "Akaya Telivigala", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    h1 {
+      text-align: center;
+    }
+
+    .start {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+  }
+}
+
+.btn {
+  width: 209px;
+  height: 85px;
+  border-radius: 13px;
+  background: darkslategrey;
+  cursor: pointer;
+  border-color: #f1c40f;
+  outline: 0;
+  color: beige;
+  font-size: 18px;
+  transition: 0.4s;
+
+  &:hover {
+    background: wheat;
+    color: #000;
+  }
+}

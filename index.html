@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/css/style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>Basic Rpg with Vanilla JavaScript</h1>
+      <h1 id="afterGame"></h1>
+      <h1 id="afterBattle"></h1>
+
+      <div id="start" class="start">
+        <button onclick="startGame()" class="btn">
+          Click when you're ready
+        </button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="game-screen">
+      <div class="buttons">
+        <button onclick="goShop()" class="btn">Shop</button>
+        <button onclick="goBattle()" class="btn">Battle</button>
+      </div>
+      <div class="stats">
+        <h2>Your stats</h2>
+        <h3 id="playerHp">Hp:</h3>
+        <h3 id="playerPower">Power:</h3>
+        <h3 id="playerMoney">Money:</h3>
+      </div>
+    </div>
+
+    <!-- Shop Screen -->
+    <div id="shop" class="shop-screen">
+      <h2 onclick="goBack()" id="go-back">Go back</h2>
+      <h1>Shop</h1>
+      <h2 id="warning"></h2>
+      <h2 id="shop-money">Your money:</h2>
+
+      <div class="items-container">
+        <div class="items">
+          <div class="item">
+            <h4>War Stick -></h4>
+            <h4>Power 5 -></h4>
+            <button
+              value="stick"
+              onclick="buyWeapon(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 15G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Rusty Knife -></h4>
+            <h4>Power 15 -></h4>
+            <button
+              value="knife"
+              onclick="buyWeapon(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 40G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Silver Sword -></h4>
+            <h4>Power 45 -></h4>
+            <button
+              value="sword"
+              onclick="buyWeapon(this.value ,this)"
+              class="buy-btn"
+            >
+              Buy: 120G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Battle Axe -></h4>
+            <h4>Power 65 -></h4>
+            <button
+              value="axe"
+              onclick="buyWeapon(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 200G
+            </button>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="items">
+          <div class="item">
+            <h4>Basic Health Potion -></h4>
+            <h4>Hp 10 -></h4>
+            <button
+              value="basic"
+              onclick="buyPotions(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 10G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Bottle of Potion -></h4>
+            <h4>Hp 30 -></h4>
+            <button
+              value="bottle"
+              onclick="buyPotions(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 25G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Potion of Wizard -></h4>
+            <h4>Hp 60 -></h4>
+            <button
+              value="wizard"
+              onclick="buyPotions(this.value)"
+              class="buy-btn"
+            >
+              Buy: 45G
+            </button>
+          </div>
+          <div class="item">
+            <h4>Life Elixir -></h4>
+            <h4>Hp 100 -></h4>
+            <button
+              value="elixir"
+              onclick="buyPotions(this.value, this)"
+              class="buy-btn"
+            >
+              Buy: 70G
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Battle Screen -->
+    <div id="battle-screen" class="battle-screen">
+      <!-- Title -->
+      <h1>Battle</h1>
+
+      <h2 id="level">Level</h2>
+
+      <!-- Warriors -->
+      <div class="warriors">
+        <div class="warrior player">
+          <span id="player-battle-hp"> Your Hp: </span>
+
+          <div class="hp">
+            <div class="hp-active" id="active-hp"></div>
+          </div>
+        </div>
+        <div class="warrior opponent">
+          <span id="opponent-battle-stats">Opponent's Hp: </span>
+
+          <div class="hp">
+            <div id="opponent-active-hp" class="hp-active"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Battle Log -->
+
+      <div class="battle-div">
+        <h1 id="battle-log"></h1>
+      </div>
+
+      <!-- Moves -->
+      <div class="moves">
+        <button onclick="attack()" class="btn">Attack</button>
+        <button onclick="flee()" class="btn">Flee</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.game-screen {
+  display: none;
+  width: 80%;
+  margin-top: 20px;
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .stats {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      margin-top: 15px;
+    }
+  }
+}

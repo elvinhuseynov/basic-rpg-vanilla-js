@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+.game-screen {
+  display: none;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.game-screen .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-screen .stats {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-screen .stats h3 {
+  margin-top: 15px;
+}
+
+.shop-screen {
+  background-color: gray;
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+}
+
+.shop-screen #go-back {
+  cursor: pointer;
+  text-align: center;
+}
+
+.shop-screen h1, .shop-screen h2 {
+  text-align: center;
+}
+
+.shop-screen .items-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.shop-screen .items-container .line {
+  width: 1px;
+  background-color: #000;
+}
+
+.shop-screen .items-container .items {
+  width: 48%;
+}
+
+.shop-screen .items-container .items .item {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.shop-screen .items-container .items .item .buy-btn {
+  width: 86px;
+  height: 41px;
+  border-radius: 13px;
+  background: darkslategrey;
+  cursor: pointer;
+  border-color: #f1c40f;
+  outline: 0;
+  color: beige;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.shop-screen .items-container .items .item .buy-btn:hover {
+  background: wheat;
+  color: #000;
+}
+
+.battle-screen {
+  background-color: gray;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.battle-screen h1 {
+  text-align: center;
+}
+
+.battle-screen .warriors {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.battle-screen .warriors .warrior {
+  width: 45%;
+  margin: 20px 0;
+}
+
+.battle-screen .warriors .warrior .hp {
+  width: 100%;
+  background-color: black;
+  height: 30px;
+}
+
+.battle-screen .warriors .warrior .hp .hp-active {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: red;
+}
+
+.battle-screen .moves {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+* {
+  font-family: "Akaya Telivigala", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .header h1 {
+  text-align: center;
+}
+
+body .header .start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.btn {
+  width: 209px;
+  height: 85px;
+  border-radius: 13px;
+  background: darkslategrey;
+  cursor: pointer;
+  border-color: #f1c40f;
+  outline: 0;
+  color: beige;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: wheat;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */
