@@ -6,6 +6,9 @@
 }
 
 .game-screen .buttons {
+  width: 100%;
+  height: 200px;
+  margin-left: auto;
   display: flex;
   justify-content: space-around;
 }
@@ -22,6 +25,15 @@
   margin-top: 15px;
 }
 
+@media only screen and (max-width: 600px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 25%;
+  }
+}
+
 .shop-screen {
   background-color: gray;
   width: 100%;
@@ -34,7 +46,8 @@
   text-align: center;
 }
 
-.shop-screen h1, .shop-screen h2 {
+.shop-screen h1,
+.shop-screen h2 {
   text-align: center;
 }
 
@@ -79,6 +92,20 @@
   color: #000;
 }
 
+@media only screen and (max-width: 600px) {
+  .items-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .line {
+    width: 100% !important;
+    height: 1px;
+  }
+  .items {
+    width: 100% !important;
+  }
+}
+
 .battle-screen {
   background-color: gray;
   width: 100%;
@@ -94,6 +121,7 @@
 
 .battle-screen .warriors {
   width: 90%;
+  height: 50%;
   display: flex;
   justify-content: space-around;
 }
@@ -122,6 +150,19 @@
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .warriors {
+    display: flex;
+    flex-direction: column;
+  }
+  .warrior {
+    width: 100% !important;
+  }
+  .moves {
+    width: 90% !important;
+  }
 }
 
 * {

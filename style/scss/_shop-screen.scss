@@ -4,12 +4,13 @@
   margin-top: 20px;
   display: none;
 
-  #go-back{
-      cursor: pointer;
-      text-align: center;
+  #go-back {
+    cursor: pointer;
+    text-align: center;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 
@@ -52,5 +53,21 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .items-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line {
+    width: 100% !important;
+    height: 1px;
+  }
+
+  .items {
+    width: 100% !important;
   }
 }

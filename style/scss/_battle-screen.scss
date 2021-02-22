@@ -12,9 +12,10 @@
 
   .warriors {
     width: 90%;
+    height: 50%;
     display: flex;
     justify-content: space-around;
-    
+
     .warrior {
       width: 45%;
       margin: 20px 0;
@@ -42,3 +43,18 @@
     justify-content: space-between;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .warriors {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .warrior {
+    width: 100% !important;
+  }
+
+  .moves {
+    width: 90% !important;
+  }
+} ;

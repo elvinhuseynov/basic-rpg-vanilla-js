@@ -45,18 +45,22 @@ const weapons = {
   stick: {
     power: 5,
     price: 15,
+    bought: 0,
   },
   knife: {
     power: 15,
     price: 40,
+    bought: 0,
   },
   sword: {
     power: 45,
     price: 120,
+    bought: 0,
   },
   axe: {
     power: 65,
     price: 200,
+    bought: 0,
   },
 };
 
@@ -104,20 +108,28 @@ const buyWeapon = (value, button) => {
     case "stick":
       itemPower = weapons.stick.power;
       itemPrice = weapons.stick.price;
+      weapons.stick.bought = 1;
       break;
+
     case "knife":
       itemPrice = weapons.knife.price;
       itemPower = weapons.knife.power;
+      weapons.knife.bought = 1;
+
       break;
 
     case "sword":
       itemPrice = weapons.sword.price;
       itemPower = weapons.sword.power;
+      weapons.knife.bought = 1;
       break;
+
     case "axe":
       itemPrice = weapons.axe.price;
       itemPower = weapons.axe.power;
+      weapons.knife.bought = 1;
       break;
+
     default:
       break;
   }
@@ -231,10 +243,7 @@ const attack = () => {
 };
 
 const gameLose = () => {
-  battleScreen.style.display = "none";
-  afterGame.innerText = `You lose :(. Your max score: ${playerStats.maxScore}`;
-  startScreen.style.display = "flex";
-  afterBattle.innerText = "";
+  location.reload();
 };
 
 const gameWin = () => {
